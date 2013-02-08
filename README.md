@@ -61,7 +61,7 @@ And add it to your `package.json`
 "dependencies": {
     "express": "3.0.6",
     "jade": "*",
-+    "fb": "0.1.0"
++   "facebook-node-sdk": "0.1.0"
   }
 ```
 
@@ -77,7 +77,8 @@ Whaooo that's new. What's that second argument? From the [express documentation]
 app.VERB(path, [callback...], callback)
 ```
 
-And express gives us the following description
+And express gives us the following description:
+
 * Multiple callbacks may be given, all are treated equally, and behave just like middleware, with the one exception that these callbacks may invoke next('route') to bypass the remaining route callback(s).
 
 Cool. It means that if you pass in multiple functions they'll probably be called one after the other depending on how the previous functions are implemented.
